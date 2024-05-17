@@ -1,10 +1,24 @@
 {
-    "name": "Steve",
+    "name": "Danny",
     "profession": "Software Engineer",
-    "age": 20,
+    "age": 24,
+    "freelance": "Available",
     "residence": "S.Korea",
     "adress": "S.Korea, Busan",
-    "languages": ["Uzbek", "Korean", "English"]
+    "languages": ["Uzbek", "Korean", "English"],
+    "skills": ["Html", "CSS", "JS", "Nodejs", "Python"],
+    "extra_skills": ["Bootstrap", "Materialize", "Styling, Sass", "Django Flask", "Git Knowledge"],
+    "work_place": "Software Engineer in Google.com",
+    "service_desc": "Create a good working environment for the people and let them enjoy lol",
+    "about_me": "Oddiy qishloqdan chiqqan jaydari bezori bola, hozir bo'lsa girt bekorchi bolgan lol",
+    "city": "gwangju",
+    "services": ["web development", "Ui/uX design", "sound design", "game design", "photography", "advertising"],
+    "services_desc": ["blog", "e-commerce", "Mobile app", "web design", "Voie over, Beat making", "Character Development"],
+    "flower_name": ["Tulip", "Daffodil", "poppy", "Sunflower", "Bluebell", "Rose", "Snowdrop", "Cherry", "Blossomm"],
+    "flower_price": ["15$", "25$", "12$", "20$", "35$", "30$", "22$", "19$", "9$"],
+    "famous_words": ["World is not Beuatiful with Flowers"],
+    "famous_name": ["Cristiano Ronaldo"],
+    "ads": "bu yerda sizning reklamangiz bo'lishi mumkin edi, lekin siz pulni tolamagansiz bratan"
 
 
 
