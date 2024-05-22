@@ -89,8 +89,6 @@ console.log(countLetter("e", "engineer"));
 // console.log('Passed here 1');
 
 
-
-
 //async & va await orqali call qismini qurdik
 // async function run() {
 //     let javob = await maslahatBering(25);
