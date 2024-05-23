@@ -8,7 +8,6 @@
     "dev": "nodemon server.js",
     "train": "nodemon train.js",
     "author": "nodemon author.ejs",
-
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +16,7 @@
   "dependencies": {
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "mongodb": "^3.2.6",
     "nodemon": "^3.1.0"
   }
 }
