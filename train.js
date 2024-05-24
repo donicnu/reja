@@ -13,8 +13,14 @@ function countDigits(str) {
     return digitCount;
   }
 
-  const exampleString = "ad2a54y79wet0sfgb9";
-  console.log(countDigits(exampleString));
+  const stringOne = "ad2a54y79wet0sfgb9";
+  console.log(countDigits(stringOne));
+
+  const stringTwo = "m93nfwk9462bb";
+  console.log(countDigits(stringTwo));
+
+  const stringThree = "01056859808w19e91697193949177401s";
+  console.log(countDigits(stringThree));
 // A-TASK:
 // Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi
 // letterni ikkinchi parametragi sozdan qatnashga sonini return qilishi
