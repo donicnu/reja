@@ -1,8 +1,8 @@
+//express bu server quradigan framework
 console.log("Web Serverni boshlash");
 const express = require("express"); //express ham function, ham object, (express external package, va bu framework ham)
 const app = express(); //expres orqali app instance(ozgaruvchi) ovoldik
 const fs =require("fs");
-
 
 
 // MongoDB 
@@ -33,22 +33,17 @@ app.set("view engine", "ejs")
 
 //4 Routing code:
 app.post("/create-item", (req, res) => {
-    console.log('user entered /')
-    console.log(req.body);
+    console.log("user entered /create-item")
     const new_reja = req.body.reja;
     db.collection("plans").insertOne({reja: new_reja}, (err, data) => {
-        if(err) {
-            console.log(err);
-            res.end('something went wrong');
-        } else {
-            res.end('successfully added');
-        }
+        console.log(data.ops);
+        res.json(data.ops[0]);
     });
 })
 
 app.get("/author", (req, res) => {
     res.render("author", { user: user });
-})
+});
 
 app.get("/", function(req, res) {
     console.log('user entered /')

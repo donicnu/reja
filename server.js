@@ -7,14 +7,13 @@ const connectionString = "mongodb+srv://donicnu:9402898aaA@cluster0.hbnwx9r.mong
 
 mongodb.connect(connectionString, {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 }, (err, client) => {
 if(err) console.log("ERROR on connection MongoDB");
 else {
     console.log("MongoDB connection successful");
     // console.log(client);
    module.exports = client;
-
 
     const app = require("./app")
     const server = http.createServer(app);
