@@ -1,26 +1,72 @@
+//C-TASK
+//Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass 
+//bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
+//Har bir method ishga tushgan vaqt ham log qilinsin.
+//MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non,
+// 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4)
+// & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+//class - state, constructor, method
+const moment = require("moment");
+
+class Shop {
+  non;
+  lagmon;
+  cola;
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  qoldiq() {
+    return `Hozirda ${moment().format("hh:mm")} ${this.non}ta non  ${this.lagmon}ta lagmon  ${this.cola}ta cola mavjud`;
+  }
+
+  sotish(product, number) {
+    if (this.non >= number) {
+      this.non -= number;
+      console.log(`${product}, ${number}`);
+    }
+  }
+
+  qabul(product, number) {
+    this.cola += number;
+    console.log(`${product}, ${number} `);
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+const result = shop.qoldiq();
+console.log(result);
+shop.sotish("non", 3);
+shop.qabul("cola", 4);
+const result2 = shop.qoldiq();
+console.log(result2);
+
+
 //B-TASK:
 //Shunday function tuzing, u 1ta string parametrga ega bolsin, 
 //hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 //MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
-function countDigits(str) {
-    let digitCount = 0;
+// function countDigits(str) {
+//     let digitCount = 0;
 
-    for (let i = 0; i < str.length; i++) {
-      if (str[i] >= '0' && str[i] <= '9') {
-        digitCount++;
-      }
-    }
-    return digitCount;
-  }
+//     for (let i = 0; i < str.length; i++) {
+//       if (str[i] >= '0' && str[i] <= '9') {
+//         digitCount++;
+//       }
+//     }
+//     return digitCount;
+//   }
 
-  const stringOne = "ad2a54y79wet0sfgb9";
-  console.log(countDigits(stringOne));
+//   const stringOne = "ad2a54y79wet0sfgb9";
+//   console.log(countDigits(stringOne));
 
-  const stringTwo = "m93nfwk9462bb";
-  console.log(countDigits(stringTwo));
+//   const stringTwo = "m93nfwk9462bb";
+//   console.log(countDigits(stringTwo));
 
-  const stringThree = "01056859808w19e91697193949177401s";
-  console.log(countDigits(stringThree));
+//   const stringThree = "01056859808w19e91697193949177401s";
+//   console.log(countDigits(stringThree));
 // A-TASK:
 // Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi
 // letterni ikkinchi parametragi sozdan qatnashga sonini return qilishi

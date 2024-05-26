@@ -7,6 +7,7 @@ const fs =require("fs");
 
 // MongoDB 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 // const db = require("./server").db();
 
 let user;
@@ -44,6 +45,17 @@ app.post("/create-item", (req, res) => {
 app.get("/author", (req, res) => {
     res.render("author", { user: user });
 });
+
+app.post("/delete-item", (req, res) => {
+    const id = req.body.id;
+    db.collection("plans").deleteOne(
+        {_id: new mongodb.ObjectId(id)}, 
+        function(err, data) {
+        res.json({state: "success"});
+    })
+    //object id ichiga, mongodb id type ni ham soragani uchun wrap qilib yozish kk
+});
+
 
 app.get("/", function(req, res) {
     console.log('user entered /')
