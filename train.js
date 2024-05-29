@@ -1,3 +1,24 @@
+//D-TASK: 
+
+//Shunday function tuzing, u 2ta string parametr ega bolsin, 
+//hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda 
+//false qaytarsin
+//MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function sameLetters(str1, str2) {
+  if (str1.length !== str2.length) {
+    return false;
+  }
+  const sortedStr1 = str1.split('').sort().join('');
+  const sortedStr2 = str2.split('').sort().join('');
+
+  return sortedStr1 === sortedStr2;
+}
+console.log(sameLetters("maktab", "tabmak"));
+console.log(sameLetters("mitgroup", "gmtiprou"));
+console.log(sameLetters("devex", "devexa"));
+
+
 //C-TASK
 //Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass 
 //bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
@@ -6,42 +27,42 @@
 // 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4)
 // & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
 //class - state, constructor, method
-const moment = require("moment");
+// const moment = require("moment");
 
-class Shop {
-  non;
-  lagmon;
-  cola;
-  constructor(non, lagmon, cola) {
-    this.non = non;
-    this.lagmon = lagmon;
-    this.cola = cola;
-  }
+// class Shop {
+//   non;
+//   lagmon;
+//   cola;
+//   constructor(non, lagmon, cola) {
+//     this.non = non;
+//     this.lagmon = lagmon;
+//     this.cola = cola;
+//   }
 
-  qoldiq() {
-    return `Hozirda ${moment().format("hh:mm")} ${this.non}ta non  ${this.lagmon}ta lagmon  ${this.cola}ta cola mavjud`;
-  }
+//   qoldiq() {
+//     return `Hozirda ${moment().format("hh:mm")} ${this.non}ta non  ${this.lagmon}ta lagmon  ${this.cola}ta cola mavjud`;
+//   }
 
-  sotish(product, number) {
-    if (this.non >= number) {
-      this.non -= number;
-      console.log(`${product}, ${number}`);
-    }
-  }
+//   sotish(product, number) {
+//     if (this.non >= number) {
+//       this.non -= number;
+//       console.log(`${product}, ${number}`);
+//     }
+//   }
 
-  qabul(product, number) {
-    this.cola += number;
-    console.log(`${product}, ${number} `);
-  }
-}
+//   qabul(product, number) {
+//     this.cola += number;
+//     console.log(`${product}, ${number} `);
+//   }
+// }
 
-const shop = new Shop(4, 5, 2);
-const result = shop.qoldiq();
-console.log(result);
-shop.sotish("non", 3);
-shop.qabul("cola", 4);
-const result2 = shop.qoldiq();
-console.log(result2);
+// const shop = new Shop(4, 5, 2);
+// const result = shop.qoldiq();
+// console.log(result);
+// shop.sotish("non", 3);
+// shop.qabul("cola", 4);
+// const result2 = shop.qoldiq();
+// console.log(result2);
 
 
 //B-TASK:
