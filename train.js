@@ -1,27 +1,38 @@
-//D-TASK: 
+//E-TASK:
+//Shunday function tuzing, u bitta string argumentni qabul qilib osha
+//stringni teskari qilib return qilsin.
+//MASALAN: getReverse("hello") return qilsin "olleh"
 
-//Shunday function tuzing, u 2ta string parametr ega bolsin, 
-//hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda 
+function getReverse(a) {
+  const test = a.split("").reverse().join("");
+  console.log(test);
+}
+getReverse("salom");
+getReverse("MIT");
+
+//D-TASK:
+
+//Shunday function tuzing, u 2ta string parametr ega bolsin,
+//hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda
 //false qaytarsin
 //MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function sameLetters(str1, str2) {
-  if (str1.length !== str2.length) {
-    return false;
-  }
-  const sortedStr1 = str1.split('').sort().join('');
-  const sortedStr2 = str2.split('').sort().join('');
+// function sameLetters(str1, str2) {
+//   if (str1.length !== str2.length) {
+//     return false;
+//   }
+//   const sortedStr1 = str1.split('').sort().join('');
+//   const sortedStr2 = str2.split('').sort().join('');
 
-  return sortedStr1 === sortedStr2;
-}
-console.log(sameLetters("maktab", "tabmak"));
-console.log(sameLetters("mitgroup", "gmtiprou"));
-console.log(sameLetters("devex", "devexa"));
-
+//   return sortedStr1 === sortedStr2;
+// }
+// console.log(sameLetters("maktab", "tabmak"));
+// console.log(sameLetters("mitgroup", "gmtiprou"));
+// console.log(sameLetters("devex", "devexa"));
 
 //C-TASK
-//Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass 
-//bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
+//Shunday class tuzing tuzing nomi Shop, va uni constructoriga 3 hil mahsulot pass
+//bolsin, hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul.
 //Har bir method ishga tushgan vaqt ham log qilinsin.
 //MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non,
 // 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4)
@@ -64,9 +75,8 @@ console.log(sameLetters("devex", "devexa"));
 // const result2 = shop.qoldiq();
 // console.log(result2);
 
-
 //B-TASK:
-//Shunday function tuzing, u 1ta string parametrga ega bolsin, 
+//Shunday function tuzing, u 1ta string parametrga ega bolsin,
 //hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
 //MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 // function countDigits(str) {
@@ -106,8 +116,6 @@ console.log(sameLetters("devex", "devexa"));
 
 // console.log(countLetter("e", "engineer"));
 
-
-
 // console.log("Jack Ma maslahatlari");
 // const list = [
 //     "yaxshi talaba boling", //0-20
@@ -133,19 +141,17 @@ console.log(sameLetters("devex", "devexa"));
 //     }
 // }
 
-
 // console.log('Passed here 0')
 // maslahatBering(65, (err, data) => {  //parametr sifatida function ishg tushadi
 //     if(err) console.log('ERROR:', err);
 //     else {
 //         console.log('javob:', data)
-//     } 
+//     }
 // });
 
-
-//ASYNC functions 
+//ASYNC functions
 // async function maslahatBering(a) {
-//     if(typeof a !== 'number') throw new Error("insert number") 
+//     if(typeof a !== 'number') throw new Error("insert number")
 //     else if(a <= 20) return list[0];
 //     else if(a > 20 && a <= 30) return list[1];
 //     else if(a > 30 && a <= 40) return list[2];
@@ -164,7 +170,7 @@ console.log(sameLetters("devex", "devexa"));
 //     if(err) console.log('ERROR:', err);
 //     else {
 //         console.log('javob:', data)
-//     } 
+//     }
 // });
 
 //then catch orqali call qismini yasadik
@@ -177,7 +183,6 @@ console.log(sameLetters("devex", "devexa"));
 //     console.log('ERROR:', err)
 // })
 // console.log('Passed here 1');
-
 
 //async & va await orqali call qismini qurdik
 // async function run() {

@@ -9,7 +9,7 @@ const fs = require("fs");
 //http ni createserver methodi orqali app ni pass qilyabmiz
 
 // MongoDB
-const db = require("./server").db();
+const db = require("./server").db(); //mongo dbdan kelyotgan file ni module.exports ni oqivolyapmiz
 const mongodb = require("mongodb");
 
 let user;
